@@ -43,7 +43,7 @@ jobs:
     name: Release a new version
     runs-on: ubuntu-latest
     container:
-      image: perdy/github-actions-builder:latest
+      image: python:3.8
     steps:
       - uses: actions/checkout@master
         if: github.event_name == 'push' && github.ref != 'refs/heads/master'

@@ -2,6 +2,7 @@ import pytest
 from blacksheep.server import Application
 from blacksheep.server.responses import text
 from blacksheep.testing import TestClient
+from prometheus_client import REGISTRY, Counter
 
 from blacksheep_prometheus import PrometheusMiddleware, metrics
 
@@ -29,8 +30,15 @@ def app():
         return text(f'{path}/{params} called')
 
     @app_.router.get('/no-metrics')
-    def no_metrics(path: str, params: str):
+    def no_metrics():
         return text('no metrics collected from that route')
+
+    my_custom_metric = Counter('my_custom_metric', 'Custom metric', registry=REGISTRY)
+
+    @app_.router.get('/custom-metrics')
+    def custom_metrics():
+        my_custom_metric.inc()
+        return text('custom metrics also collected!')
 
     return app_
 
@@ -79,6 +87,27 @@ async def test_text_view_ok(client: TestClient):
     # Requests in progress
     assert 'blacksheep_requests_in_progress{method="GET",path="/text"} 0.0' in metrics_text
     assert 'blacksheep_requests_in_progress{method="GET",path="/metrics/"} 1.0' in metrics_text
+
+
+@pytest.mark.asyncio
+async def test_custom_metrics_ok(client: TestClient):
+    await client.get('/custom-metrics')
+
+    metrics_response = await client.get('/metrics/')
+    metrics_text = await metrics_response.text()
+
+    # Requests
+    assert 'blacksheep_requests_total{method="GET",path="/custom-metrics"} 1.0' in metrics_text
+
+    # Responses
+    assert 'blacksheep_responses_total{method="GET",path="/custom-metrics",status_code="200"} 1.0' in metrics_text
+
+    # Requests in progress
+    assert 'blacksheep_requests_in_progress{method="GET",path="/custom-metrics"} 0.0' in metrics_text
+    assert 'blacksheep_requests_in_progress{method="GET",path="/metrics/"} 1.0' in metrics_text
+
+    # Custom metrics
+    assert 'my_custom_metric_total 1.0' in metrics_text
 
 
 @pytest.mark.asyncio

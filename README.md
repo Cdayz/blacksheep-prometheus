@@ -11,7 +11,7 @@ Prometheus integration for Blacksheep.
 
 ## Requirements
 
-* Python 3.6+
+* Python 3.7+
 * Blacksheep 1.0.7+
 
 ## Installation

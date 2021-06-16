@@ -25,7 +25,7 @@ include = [
 exclude = []
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 prometheus-client = ">=0.11.0"
 blacksheep = ">=1.0.7"
 

@@ -1,0 +1,25 @@
+repos:
+  - repo: local
+    hooks:
+      - id: flake8
+        name: Flake8 - Code Linter
+        entry: poetry run flake8
+        language: system
+        types: [python]
+
+      - id: isort
+        name: Isort - Sort Imports
+        entry: poetry run isort
+        args:
+        - -e
+        language: system
+        types: [python]
+
+  - repo: git@github.com:pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+    -   id: check-added-large-files
+    -   id: check-merge-conflict
+    -   id: check-xml
+    -   id: check-yaml
+    -   id: debug-statements

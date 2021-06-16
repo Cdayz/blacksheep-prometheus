@@ -1,0 +1,36 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "blacksheep-prometheus"
+version = "0.1.0"
+description = "Prometheus integration for blacksheep"
+authors = ["Nikita Tomchik <cdayz@yandex.ru>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Cdayz/blacksheep-prometheus"
+keywords = ["blacksheep", "prometheus", "metrics"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+]
+include = []
+exclude = []
+
+[tool.poetry.dependencies]
+python = "^3.7"
+prometheus-client = ">=0.11.0"
+blacksheep = ">=1.0.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-xdist = "^2.2.1"
+pytest-cov = "^2.12.1"
+tox = "^3.23.1"
+isort = "^5.8.0"
+flake8 = "^3.9.2"
+pytest-asyncio = "^0.15.1"

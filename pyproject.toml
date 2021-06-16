@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "blacksheep-prometheus"
-version = "0.1.0"
+version = "0.1.1"
 description = "Prometheus integration for blacksheep"
 authors = ["Nikita Tomchik <cdayz@yandex.ru>"]
 license = "MIT"

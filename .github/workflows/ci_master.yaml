@@ -38,3 +38,19 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: test-results/coverage.xml
+  release:
+    needs: test
+    name: Release a new version
+    runs-on: ubuntu-latest
+    container:
+      image: perdy/github-actions-builder:latest
+    steps:
+      - uses: actions/checkout@master
+        if: github.event_name == 'push' && github.ref != 'refs/heads/master'
+      - id: publish
+        name: Publish version
+        if: github.event_name == 'push' && github.ref != 'refs/heads/master'
+        run: make publish-to-pypi
+        env:
+          PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
+          PYPI_PUBLISH_TOKEN: ${{ secrets.PYPI_PUBLISH_TOKEN }}

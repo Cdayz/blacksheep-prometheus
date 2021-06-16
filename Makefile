@@ -19,3 +19,6 @@ flake8-lint: deps
 .PHONY: tests
 tests: deps
 	poetry run pytest
+
+publish-to-pypi:
+	poetry publish --build --username ${PYPI_USERNAME} --password ${PYPI_PUBLISH_TOKEN} --dry-run

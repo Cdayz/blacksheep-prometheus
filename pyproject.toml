@@ -9,6 +9,7 @@ description = "Prometheus integration for blacksheep"
 authors = ["Nikita Tomchik <cdayz@yandex.ru>"]
 license = "MIT"
 readme = "README.md"
+homepage = "https://github.com/Cdayz/blacksheep-prometheus"
 repository = "https://github.com/Cdayz/blacksheep-prometheus"
 keywords = ["blacksheep", "prometheus", "metrics"]
 classifiers = [
@@ -18,7 +19,9 @@ classifiers = [
     "Topic :: Software Development",
     "Topic :: Software Development :: Libraries",
 ]
-include = []
+include = [
+    "LICENSE",
+]
 exclude = []
 
 [tool.poetry.dependencies]

@@ -2,8 +2,8 @@
 
 [![Build Status](https://github.com/Cdayz/blacksheep-prometheus/workflows/Continuous%20Integration/badge.svg)](https://github.com/Cdayz/blacksheep-prometheus/actions)
 [![codecov](https://codecov.io/gh/Cdayz/blacksheep-prometheus/branch/master/graph/badge.svg?token=YJTGKBTQSE)](https://codecov.io/gh/Cdayz/blacksheep-prometheus)
-[![Package Version](https://img.shields.io/pypi/v/blacksheep-prometheus?logo=PyPI&logoColor=white)](https://pypi.org/project/starlette-prometheus/)
-[![PyPI Version](https://img.shields.io/pypi/pyversions/blacksheep-prometheus?logo=Python&logoColor=white)](https://pypi.org/project/starlette-prometheus/)
+[![Package Version](https://img.shields.io/pypi/v/blacksheep-prometheus?logo=PyPI&logoColor=white)](https://pypi.org/project/blacksheep-prometheus/)
+[![PyPI Version](https://img.shields.io/pypi/pyversions/blacksheep-prometheus?logo=Python&logoColor=white)](https://pypi.org/project/blacksheep-prometheus/)
 
 ## Introduction
 

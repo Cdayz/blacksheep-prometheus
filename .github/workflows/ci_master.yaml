@@ -30,3 +30,11 @@ jobs:
       - id: tests
         name: Tests
         run: make tests
+      - id: codecov
+        name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1.0.2
+        # Run on a specific python version and only master branch commits
+        if: matrix.python == 3.8 && github.event_name == 'push' && github.ref == 'refs/heads/master'
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: test-results/coverage.xml

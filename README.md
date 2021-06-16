@@ -1,5 +1,7 @@
 # Blacksheep Prometheus
 
+[![Build Status](https://github.com/Cdayz/blacksheep-prometheus/workflows/Continuous%20Integration/badge.svg)](https://github.com/Cdayz/blacksheep-prometheus/actions)
+
 ## Introduction
 
 Prometheus integration for Blacksheep.

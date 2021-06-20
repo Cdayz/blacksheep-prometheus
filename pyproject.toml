@@ -31,7 +31,7 @@ blacksheep = ">=1.0.7"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
-pytest-xdist = "^2.2.1"
+pytest-xdist = "^2.3.0"
 pytest-cov = "^2.12.1"
 tox = "^3.23.1"
 isort = "^5.8.0"

@@ -30,7 +30,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "blacksheep"
-version = "1.0.7"
+version = "1.0.8"
 description = "Fast web framework and HTTP client for Python asyncio"
 category = "main"
 optional = false
@@ -39,8 +39,8 @@ python-versions = "*"
 [package.dependencies]
 cchardet = ">=2.1.5,<2.2.0"
 certifi = ">=2020.12.5"
-essentials = "1.1.4"
-essentials-openapi = "0.1.2"
+essentials = ">=1.1.4,<2.0"
+essentials-openapi = ">=0.1.4,<1.0"
 guardpost = ">=0.0.7,<0.1.0"
 httptools = ">=0.2.0,<0.3.0"
 itsdangerous = "1.1.0"
@@ -105,7 +105,7 @@ python-versions = "*"
 
 [[package]]
 name = "essentials-openapi"
-version = "0.1.2"
+version = "0.1.4"
 description = "Classes to generate OpenAPI Documentation v3 and v2, in JSON and YAML"
 category = "main"
 optional = false
@@ -515,16 +515,16 @@ attrs = [
     {file = "attrs-21.2.0.tar.gz", hash = "sha256:ef6aaac3ca6cd92904cdd0d83f629a15f18053ec84e6432106f7a4d04ae4f5fb"},
 ]
 blacksheep = [
-    {file = "blacksheep-1.0.7-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:61a6157b70e4bca11df62d140c58daea2e2f4e0e285d882075265126bd657f0e"},
-    {file = "blacksheep-1.0.7-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:876b3104a9cf4f4448bea1c8c72b96f8a9b1147b249c5db3ad4b5e0722752da1"},
-    {file = "blacksheep-1.0.7-cp37-cp37m-win_amd64.whl", hash = "sha256:fad288b8e18c6483c3d9a0ef77bf9c3f395f3f5c715f2684346d2aa617077dc0"},
-    {file = "blacksheep-1.0.7-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:a399680728793a5073d7b6f463bd5a86dbad2b4b84f903d38b1e9cd43aeb700e"},
-    {file = "blacksheep-1.0.7-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:e036cc2f3edfef8c156eacb03fa462585120e9967338b25b96a3a3e2caecff02"},
-    {file = "blacksheep-1.0.7-cp38-cp38-win_amd64.whl", hash = "sha256:5e1176fd550a08a13d5417b954b4aa484f36001a41f243e1c57c8e2012d5365f"},
-    {file = "blacksheep-1.0.7-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:6cab10a32edc2af05caa6e508c7c0e8cd725151af886f13492b89dde0d99e32a"},
-    {file = "blacksheep-1.0.7-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:998da299a152da23dd1b72d955095d7e9d38851851026725f0763702bdfc7375"},
-    {file = "blacksheep-1.0.7-cp39-cp39-win_amd64.whl", hash = "sha256:69649336a034fdec97b7983bef4aec4dec184952233fa94ed4fbefcad73d7b93"},
-    {file = "blacksheep-1.0.7.tar.gz", hash = "sha256:eb1915b709c85b6a3a6e750c9d8c2ffb2d81f3dd63d91917b126bdf8fae9671a"},
+    {file = "blacksheep-1.0.8-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:c5ac94fafe36225b0b483ff85f2608daa3cad7d7e78c2d50dea732b28007460e"},
+    {file = "blacksheep-1.0.8-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:438c1d2276759964c31924a36661a4891dac3535450444c575d23e016f8678ec"},
+    {file = "blacksheep-1.0.8-cp37-cp37m-win_amd64.whl", hash = "sha256:8b7a02bb144061ca7931775e5aac236e792818b2fd8660f586ce1fd2ca79f9b5"},
+    {file = "blacksheep-1.0.8-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:184cdceccf11335133c7bda66d06a9c96320d3211f7cafac3c339eb738469414"},
+    {file = "blacksheep-1.0.8-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:80551b97615deb414097e119c0c826b25e60d2a3a24de1bf097cf9108cbb5b7e"},
+    {file = "blacksheep-1.0.8-cp38-cp38-win_amd64.whl", hash = "sha256:478ce99864922f3a5a2ba18b95cd17a35738b21e67853c4191503a5e8246c783"},
+    {file = "blacksheep-1.0.8-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:27ed462801c1b032b407f7d78b68d7c9aa1361d55c943007d4613541059f8a33"},
+    {file = "blacksheep-1.0.8-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:844053d9c80950ceda9b5b4c77651ca52db9bbbccf4eb4aefa6b6c8f0261fb47"},
+    {file = "blacksheep-1.0.8-cp39-cp39-win_amd64.whl", hash = "sha256:b32f1d1aed168a01ff9c7ebc3d35e5a71b63dda5e0607d66c61cf15765b5d832"},
+    {file = "blacksheep-1.0.8.tar.gz", hash = "sha256:e74156e4c5bee9960da3585c202b843c8c796d1f5e43c54c7c7e5283861ebc27"},
 ]
 cchardet = [
     {file = "cchardet-2.1.7-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:c6f70139aaf47ffb94d89db603af849b82efdf756f187cdd3e566e30976c519f"},
@@ -628,8 +628,8 @@ essentials = [
     {file = "essentials-1.1.4.tar.gz", hash = "sha256:e916f27f7641cd0537b6cd612b5d97ee70251ea54e94c74c5166cce59f8d1016"},
 ]
 essentials-openapi = [
-    {file = "essentials-openapi-0.1.2.tar.gz", hash = "sha256:02b63488012706b531ea4655f397c3753e353e63ab064fe5cf8240ceac28212e"},
-    {file = "essentials_openapi-0.1.2-py3-none-any.whl", hash = "sha256:7db4c98dc7b3340d588092201d6370f55731337308e74cb71fca1eede165c352"},
+    {file = "essentials-openapi-0.1.4.tar.gz", hash = "sha256:7e7d1cb8c74e184526b98689f8dbbe42a881dc0134d847f8b48223098ec8cfa9"},
+    {file = "essentials_openapi-0.1.4-py3-none-any.whl", hash = "sha256:c8aadb1cec4147824b91693d61d50c7737898d19f98940941e1d0b3856394090"},
 ]
 execnet = [
     {file = "execnet-1.9.0-py2.py3-none-any.whl", hash = "sha256:a295f7cc774947aac58dde7fdc85f4aa00c42adf5d8f5468fc630c1acf30a142"},

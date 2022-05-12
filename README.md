@@ -22,16 +22,14 @@ $ pip install blacksheep-prometheus
 
 ## Usage
 
-A complete example that exposes prometheus metrics endpoint under `/metrics/` path.
+A complete example that exposes prometheus metrics endpoint under default `/metrics/` endpoint.
 
 ```python
 from blacksheep.server import Application
-from blacksheep_prometheus import PrometheusMiddleware, metrics
+from blacksheep_prometheus import use_prometheus_metrics
 
 app = Application()
-
-app.middlewares.append(PrometheusMiddleware())
-app.router.add_get('/metrics/', metrics)
+use_prometheus_metrics(app)
 ```
 
 ### Options

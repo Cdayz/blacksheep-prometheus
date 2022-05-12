@@ -4,14 +4,18 @@ from blacksheep.server.responses import text
 from blacksheep.testing import TestClient
 from prometheus_client import REGISTRY, Counter
 
-from blacksheep_prometheus import PrometheusMiddleware, metrics
+from blacksheep_prometheus import PrometheusMiddleware, use_prometheus_metrics
 
 
 @pytest.fixture(scope="session")
 def app():
     app_ = Application()
-    app_.middlewares.insert(0, PrometheusMiddleware(filter_paths=['/no-metrics']))
-    app_.router.add_get('/metrics/', metrics)
+    use_prometheus_metrics(
+        app_,
+        middleware=PrometheusMiddleware(
+            filter_paths=['/no-metrics'],
+        ),
+    )
 
     @app_.router.get('/aio')
     async def aio_text_response_ok(request):

@@ -6,7 +6,7 @@ from prometheus_client import CONTENT_TYPE_LATEST, REGISTRY, CollectorRegistry, 
 from prometheus_client.multiprocess import MultiProcessCollector
 
 
-def metrics(request: Request) -> Response:
+async def metrics(request: Request) -> Response:
     if "prometheus_multiproc_dir" in os.environ:
         registry = CollectorRegistry()
         MultiProcessCollector(registry)

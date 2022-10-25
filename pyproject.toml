@@ -30,7 +30,7 @@ prometheus-client = ">=0.11.0"
 blacksheep = ">=1.0.7"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2.5"
+pytest = "^7.2.0"
 pytest-xdist = "^2.5.0"
 pytest-cov = "^3.0.0"
 tox = "^3.23.1"
